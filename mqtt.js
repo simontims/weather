@@ -13,7 +13,7 @@ var options = {
 	onSuccess: onConnect,
 	userName: "read",
 	password: "read",
-	useSsl: true,
+	useSSL: true,
 	onFailure: doFail
 }
 
