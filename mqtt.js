@@ -1,6 +1,6 @@
 const clientId = "BrowserTest" + new Date().getTime();
-const host = "192.168.1.20";
-const port = 9010;
+const host = "postman.cloudmqtt.com";
+const port = 14889;
 // const topic = "weatherWindspeed";
 // const topic2 = "weatherWinddirectionHeading";
 const topicArray = ["bubble/weather/windspeed", "bubble/weather/windDirectionHeading", "bubble/weather/temperature", "bubble/weather/BMPressure", "bubble/weather/humidity", "bubble/weather/dewPoint", "bubble/weather/rssi"];
@@ -11,6 +11,8 @@ client.onMessageArrived = onMessageArrived;
 
 var options = {
 	onSuccess:onConnect,
+  username: "read",
+  password: "read",
 	onFailure:doFail
 }
 
