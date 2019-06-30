@@ -10,10 +10,10 @@ client.onConnectionLost = onConnectionLost;
 client.onMessageArrived = onMessageArrived;
 
 var options = {
-	onSuccess:onConnect,
-  userName: "read",
-  password: "read",
-	onFailure:doFail
+	onSuccess: onConnect,
+	userName: "read",
+	password: "read",
+	onFailure: doFail
 }
 
 var subscribeOptions = {
