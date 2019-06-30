@@ -11,7 +11,7 @@ client.onMessageArrived = onMessageArrived;
 
 var options = {
 	onSuccess:onConnect,
-  username: "read",
+  userName: "read",
   password: "read",
 	onFailure:doFail
 }
