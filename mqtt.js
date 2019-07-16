@@ -44,7 +44,7 @@ const publish = (dest, msg) => {
 
 function onMessageArrived(message) {
 
-  console.log("onMessageArrived: " +message.destinationName+ ": " +message.payloadString);
+  console.log(message.destinationName+ ": " +message.payloadString);
 
   if (message.destinationName == "bubble/weather/windspeed"){
     document.getElementById("windspeed").setAttribute("data-value", Number(message.payloadString));  
@@ -75,7 +75,7 @@ function onMessageArrived(message) {
   }    
 	
   if (message.destinationName == "bubble/weather/status"){
-	document.getElementById("status").innerHtml = (message.payloadString);  
+	document.getElementById("status").innerHTML = (message.payloadString);  
   }     
   
   
