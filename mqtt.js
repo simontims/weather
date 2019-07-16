@@ -72,6 +72,10 @@ function onMessageArrived(message) {
 
   if (message.destinationName == "bubble/weather/rssi"){
 	document.getElementById("rssi").setAttribute("data-value", Number(message.payloadString));  
+  }    
+	
+  if (message.destinationName == "bubble/weather/status"){
+	document.getElementByClassName("status").Text(String(message.payloadString));  
   }     
   
   
