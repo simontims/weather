@@ -1,8 +1,7 @@
 const clientId = "BrowserTest" + new Date().getTime();
 const host = "postman.cloudmqtt.com";
 const port = 34889;
-// const topic = "weatherWindspeed";
-// const topic2 = "weatherWinddirectionHeading";
+
 const topicArray = ["bubble/weather/windspeed", "bubble/weather/windDirectionHeading", "bubble/weather/temperature", "bubble/weather/BMPressure", "bubble/weather/humidity", "bubble/weather/dewPoint", "bubble/weather/rssi", "bubble/weather/status"];
 const client = new Paho.MQTT.Client(host, Number(port), clientId);
 
