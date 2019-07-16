@@ -75,7 +75,7 @@ function onMessageArrived(message) {
   }    
 	
   if (message.destinationName == "bubble/weather/status"){
-	document.getElementByClassName("status").Text(String(message.payloadString));  
+	document.getElementById("status").Text(String(message.payloadString));  
   }     
   
   
