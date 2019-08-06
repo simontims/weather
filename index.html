@@ -1,5 +1,52 @@
 <!doctype html>
 <html lang="en">
+	
+	
+<!-- Code from Jeremy for LI
+<head>
+<title>jQuery Add LI to an Existing UL</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+$(document).ready(() => {
+    // Max length the list can be.
+    UL_Max_Length = 8;
+    // Displays on the html page the current max length.
+    $('#currentMax').text(UL_Max_Length.toString());
+    
+    // Button onclick event
+    $("button").click(() => {
+        // Gets current List length.
+        let UL_Length = $("#menu li").length;
+
+        // If Current List length is equal to Max List length.
+        if(UL_Length === UL_Max_Length){ 
+            // Removing last item from List.
+            $("#menu li").last().remove();
+        }
+
+        // Pre appending the new List Item.
+        $("#menu").prepend(`<li>New Item</li>`);
+    });
+});
+</script>
+</head>
+	
+<body>
+    <button type="button">Add New LI Element</button>
+    
+    <ul id="menu">
+        <li>Pre</li>
+        <li>Existing</li>
+        <li>List</li>
+        <li>Blah</li>
+        <li>Blah</li>
+        <li>Blah</li>
+    </ul>
+    <p>Currently set to <span id="currentMax"></span> items.</p>  
+</body>
+-->
+	
+
 
 <head>
   <meta charset="utf-8">
