@@ -78,18 +78,13 @@ function onMessageArrived(message) {
   if (message.destinationName == "bubble/weather/status"){
 	// document.getElementById("status").innerHTML = (message.payloadString);  
 	let UL_Length = $("#statuslist li").length;
-	console.log("Status list length: " + UL_Length);
 	if(UL_Length === UL_Max_Length){ 
-		console.log(UL_Length + " > " + UL_Max_Length);
         	$("#menustatus li").last().remove();
         }
-	$("#statuslist").prepend(`<li>New Item</li>`);
+	// $("#statuslist").prepend(`<li>New Item</li>`);
+	$("#statuslist").prepend("<li>" + message.payloadString + "</li>");
 	 
   }     
-	
-  //let el = document.createElement('div')
-  //el.innerHTML = message.destinationName + ": " + message.payloadString
-  //document.body.appendChild(el)
 }
 
 function doFail(e){
