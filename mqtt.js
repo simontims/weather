@@ -1,7 +1,7 @@
 const clientId = "BrowserTest" + new Date().getTime();
 const host = "postman.cloudmqtt.com";
 const port = 34889;
-UL_Max_Length = 8;
+UL_Max_Length = 10;
 
 const topicArray = ["bubble/weather/windspeed", "bubble/weather/windDirectionHeading", "bubble/weather/temperature", "bubble/weather/BMPressure", "bubble/weather/humidity", "bubble/weather/dewPoint", "bubble/weather/rssi", "bubble/weather/status"];
 const client = new Paho.MQTT.Client(host, Number(port), clientId);
@@ -79,7 +79,7 @@ function onMessageArrived(message) {
 	// document.getElementById("status").innerHTML = (message.payloadString);  
 	let UL_Length = $("#statuslist li").length;
 	if(UL_Length === UL_Max_Length){ 
-        	$("#menustatus li").last().remove();
+        	$("#statuslist li").last().remove();
         }
 	// $("#statuslist").prepend(`<li>New Item</li>`);
 	$("#statuslist").prepend("<li>" + message.payloadString + "</li>");
