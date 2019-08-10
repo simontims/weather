@@ -1,6 +1,7 @@
 const clientId = "BrowserTest" + new Date().getTime();
 const host = "postman.cloudmqtt.com";
 const port = 34889;
+UL_Max_Length = 8;
 
 const topicArray = ["bubble/weather/windspeed", "bubble/weather/windDirectionHeading", "bubble/weather/temperature", "bubble/weather/BMPressure", "bubble/weather/humidity", "bubble/weather/dewPoint", "bubble/weather/rssi", "bubble/weather/status"];
 const client = new Paho.MQTT.Client(host, Number(port), clientId);
@@ -75,10 +76,15 @@ function onMessageArrived(message) {
   }    
 	
   if (message.destinationName == "bubble/weather/status"){
-	document.getElementById("status").innerHTML = (message.payloadString);  
+	// document.getElementById("status").innerHTML = (message.payloadString);  
+	let UL_Length = $("#statuslist li").length;
+	if(UL_Length === UL_Max_Length){ 
+        	$("#menustatus li").last().remove();
+        }
+	$("#menustatus").prepend(`<li>New Item</li>`);
+	 
   }     
-  
-  
+	
   //let el = document.createElement('div')
   //el.innerHTML = message.destinationName + ": " + message.payloadString
   //document.body.appendChild(el)
