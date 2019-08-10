@@ -78,7 +78,8 @@ function onMessageArrived(message) {
   if (message.destinationName == "bubble/weather/status"){
 	// document.getElementById("status").innerHTML = (message.payloadString);  
 	let UL_Length = $("#statuslist li").length;
-	if(UL_Length === UL_Max_Length){ 
+	// if(UL_Length === UL_Max_Length){
+	if(UL_Length >= 10){
         	$("#statuslist li").last().remove();
         }
 	// $("#statuslist").prepend(`<li>New Item</li>`);
