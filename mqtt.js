@@ -78,7 +78,7 @@ function onMessageArrived(message) {
 	// document.getElementById("status").innerHTML = (message.payloadString);  
 	let UL_Length = $("#statuslist li").length;
 	console.log(UL_Length);
-	if(UL_Length >= 10){
+	if(UL_Length >= 9){
         	$("#statuslist li").last().remove();
         }
 	// $("#statuslist").prepend(`<li>New Item</li>`);
